@@ -11,7 +11,7 @@ object ProjectBuild extends Build {
         organization := "org.refptr",
         version := "0.2-SNAPSHOT",
         description := "Scala-language backend for IPython",
-        scalaVersion := "2.10.2",
+        scalaVersion := "2.10.3",
         scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-language:_"),
         shellPrompt := { state =>
             "refptr (%s)> ".format(Project.extract(state).currentProject.id)
@@ -35,7 +35,7 @@ object ProjectBuild extends Build {
 
         val ivy = "org.scala-sbt" % "ivy" % "0.13.0"
 
-        val jopt = "net.sf.jopt-simple" % "jopt-simple" % "4.5"
+        val jopt = "net.sf.jopt-simple" % "jopt-simple" % "4.6"
 
         val jeromq = "org.jeromq" % "jeromq" % "0.3.0-SNAPSHOT"
 
@@ -43,13 +43,13 @@ object ProjectBuild extends Build {
 
         val slick = "com.typesafe.slick" %% "slick" % "1.0.1"
 
-        val h2 = "com.h2database" % "h2" % "1.3.173"
+        val h2 = "com.h2database" % "h2" % "1.3.175"
 
         val sqlite = "org.xerial" % "sqlite-jdbc" % "3.7.2"
 
-        val slf4j = "org.slf4j" % "slf4j-nop" % "1.6.4"
+        val slf4j = "org.slf4j" % "slf4j-nop" % "1.7.6"
 
-        val specs2 = "org.specs2" %% "specs2" % "2.1.1" % "test"
+        val specs2 = "org.specs2" %% "specs2" % "2.3.10" % "test"
 
         val reflect = Def.setting { "org.scala-lang" % "scala-reflect" % scalaVersion.value }
 
